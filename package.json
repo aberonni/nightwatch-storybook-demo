@@ -61,7 +61,7 @@
     "babel-plugin-named-exports-order": "^0.0.2",
     "chromedriver": "^106.0.1",
     "geckodriver": "^3.0.2",
-    "nightwatch": "^2.3.9",
+    "nightwatch": "^2.4.0-preview.1",
     "prop-types": "^15.8.1",
     "webpack": "^5.74.0"
   }
