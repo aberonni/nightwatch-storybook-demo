@@ -14,7 +14,7 @@
 module.exports = {
   // An array of folders (excluding subfolders) where your tests are located;
   // if this is not specified, the test source must be passed as the second argument to the test runner.
-  src_folders: ['tests','nightwatch/examples'],
+  src_folders: ['stories/*.stories.jsx'],
 
   // See https://nightwatchjs.org/guide/concepts/page-object-model.html
   page_objects_path: ['nightwatch/page-objects'],
@@ -26,7 +26,7 @@ module.exports = {
   custom_assertions_path: ['nightwatch/custom-assertions'],
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/adding-plugins.html
-  // plugins: [],
+  plugins: ['@nightwatch/storybook'],
   
   // See https://nightwatchjs.org/guide/concepts/test-globals.html
   globals_path: '',
@@ -35,6 +35,11 @@ module.exports = {
 
   test_workers: {
     enabled: true
+  },
+
+  '@nightwatch/storybook': {
+    start_storybook: true,
+    storybook_url: 'http://localhost:6006/'
   },
 
   test_settings: {
