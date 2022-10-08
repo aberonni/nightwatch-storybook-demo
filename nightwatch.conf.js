@@ -49,7 +49,8 @@ module.exports = {
       },
 
       desiredCapabilities: {
-        browserName: 'firefox'
+        browserName: 'chrome',
+        w3c: true,
       },
       
       webdriver: {
