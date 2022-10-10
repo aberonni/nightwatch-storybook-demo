@@ -51,7 +51,8 @@ module.exports = {
       },
 
       desiredCapabilities: {
-        browserName: 'chrome'
+        browserName: 'chrome',
+				webSocketUrl: true
       },
       
       webdriver: {
