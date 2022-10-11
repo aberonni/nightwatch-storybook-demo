@@ -10,6 +10,38 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+   parameters: {
+    a11y: {
+      // Optional selector to inspect
+      element: '#root',
+      // Show the complete Acccessibilty test report (by default, only rule violations will be shown)
+      verbose: false,
+      config: {
+        rules: [
+          {
+            // The autocomplete rule will not run based on the CSS selector provided
+            id: 'autocomplete-valid',
+            selector: '*:not([autocomplete="nope"])',
+          },
+          {
+            // Setting the enabled option to false will disable checks for this particular rule on all stories.
+            id: 'image-alt',
+            enabled: false,
+          },
+          {
+            id: 'input-button-name',
+            enabled: true
+          },
+          {
+            id: 'color-contrast',
+            enabled: true
+          }
+        ],
+      },
+      options: {},
+      manual: true,
+    },
+  }
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
